@@ -1,0 +1,22 @@
+{
+  "name": "props-models-and-benchmarks",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^3.0.0",
+    "purescript-st": "^3.0.0",
+    "purescript-benchmark": "^0.1.0",
+    "purescript-spec": "^1.0.0",
+    "purescript-assertions-deepdiff": "^0.1.0",
+    "purescript-react": "^3.0.0",
+    "purescript-variant": "^1.0.0",
+    "purescript-debug": "^3.0.0"
+  }
+}
