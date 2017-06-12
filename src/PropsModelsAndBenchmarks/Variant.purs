@@ -94,7 +94,9 @@ exampleUsage =
 variantPropsBench :: forall s m. SuiteM s _ m (m Unit)
 variantPropsBench = do
   fn "variantProps"
-    (\_ -> renderInputProps $ defaultInputProps { iconPosition = right, labelPosition = leftCorner })
+    (\_ -> renderInputProps $ defaultInputProps
+      { iconPosition = right, labelPosition = leftCorner }
+    )
     (unit)
 
 -- | Test

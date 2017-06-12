@@ -7,8 +7,10 @@ import Benchmark
 
 import PropsModelsAndBenchmarks.UnionData (unionDataPropsBench)
 import PropsModelsAndBenchmarks.Variant (variantPropsBench)
+import PropsModelsAndBenchmarks.UnionNewtype (unionNewtypePropsBench)
 
 main :: forall s. Eff (st :: ST s) Unit
 main = runBench $ do
   unionDataPropsBench
   variantPropsBench
+  unionNewtypePropsBench
