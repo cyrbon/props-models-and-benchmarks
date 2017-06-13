@@ -5,7 +5,7 @@ This repository contains tests and benchmarks of several ways to model
 polymorphic react props in Purescript. This is, by no means, all possible ways you
 can express props in PS. In fact, many old libraries model props as an
 `Array ReactProps`. However, it does not provide safety, and does an extra step
-conventing array to object and back.
+conventing the array to an object and back.
 
 Starting from `PS 0.11`, it's possible to model props in a much more efficient
 and elegant way using `Union`s. It does however involve overlapping instances.
@@ -16,9 +16,9 @@ repo also explores modeling props as a
 
 In total, it currently contains:
 
-1. Union + Data (perfect looking API)
+1. Union + Data (a perfect looking API)
 2. Variant (does not require overlapping instances, better type inference)
-3. Union + Newtype (more efficient, in addition to perfect looking API)
+3. Union + Newtype (more efficient, in addition to a perfect looking API)
 
 All them contain benchmarks, unit tests and an example of how the API will look.
 You are welcome to contribute your solution, if you feel like it.
@@ -64,21 +64,21 @@ twoInputs =
 | union newtype props | 15275714.71 | 100   | 1.02  |
 
 As you can see using `Newtype` is almost 20x faster than using `Data`. This is
-because `Newtypes` only provide type information, they get erased at runtime and
+because `Newtype`s only provide type information; they get erased at runtime and
 they have the same representation as the type they wrap (in this case `String`).
 
-This means props are getting represented at runtime the same way as we would
+This means that props are getting represented at runtime the same way as we would
 write them by hand in JS.
 
-We get type safety, far fewer bugs, ease of maintenance without sacrificing
+We get type safety, far fewer bugs, ease of maintenance - all without sacrificing
 performance.
 
 ## Syntax
 
-Since, `Union` models props in a very elegant way, we get perfect readiabily,
-leaving Purescript to be one of the best languages to write React Components in.
+Since, `Union` models props in a fairly elegant way, we get perfect readability,
+making Purescript to be one of the best languages to write React Components in.
 
-Compare those two pieces of code that express the same.
+Compare those two pieces of code that express the same:
 
 ```jsx
 <div>
@@ -93,7 +93,7 @@ Compare those two pieces of code that express the same.
   ]
 ```
 
-with helpers
+same, but with helpers:
 
 ```purescript
   [ input_ { iconPosition: right }
@@ -117,4 +117,4 @@ card_ { description: cardDescription' "description" }
 
 Of course, this is just for demonstration purposes. We don't need to use a
 component inside props here. Our props are polymorphic, so we would pass a String
-instead `card_ { description: "description" }` or `card' "description" `
+instead `card_ { description: "description" }` or `card' "description"`.
