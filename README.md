@@ -16,9 +16,9 @@ repo also explores modeling props as a
 
 In total, it currently contains:
 
-1. Union + Data (a perfect looking API)
-2. Variant (does not require overlapping instances, better type inference)
-3. Union + Newtype (more efficient, in addition to a perfect looking API)
+1. [Union + Data (a perfect looking API)](https://github.com/cyrbon/props-models-and-benchmarks/blob/master/src/PropsModelsAndBenchmarks/UnionData.purs)
+2. [Variant (does not require overlapping instances, better type inference)](https://github.com/cyrbon/props-models-and-benchmarks/blob/master/src/PropsModelsAndBenchmarks/Variant.purs)
+3. [Union + Newtype (more efficient, in addition to a perfect looking API)](https://github.com/cyrbon/props-models-and-benchmarks/blob/master/src/PropsModelsAndBenchmarks/UnionNewtype.purs)
 
 All them contain benchmarks, unit tests and an example of how the API will look.
 You are welcome to contribute your solution, if you feel like it.
